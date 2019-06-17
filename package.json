@@ -1,0 +1,24 @@
+{
+  "name": "musiq",
+  "version": "1.0.0",
+  "description": "listen to songs of interest.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anilpdv/musiq.git"
+  },
+  "keywords": [
+    "musiq",
+    "songs",
+    "songs-download"
+  ],
+  "author": "anilpdv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anilpdv/musiq/issues"
+  },
+  "homepage": "https://github.com/anilpdv/musiq#readme"
+}
