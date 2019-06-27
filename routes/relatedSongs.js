@@ -3,49 +3,47 @@ const router = express.Router();
 const axios = require('axios');
 const urls = require('../utils/urls');
 const keys = [
-  'AIzaSyAc0FVfz74LKrRtoscnmTSEOZyVC6a6p-o',
-  'AIzaSyBtoEtzD2ksmw4JvkOhuMys4cH_-H0VO7w',
+  'AIzaSyBc0kmvMa1wbKLQ043RSv-FlhUgQ27pUPk',
+  'AIzaSyCUltOMQOkOQkkDnDYjIl3A0QSQ-iUEq8k',
 ];
 
-function request(q, index) {
+function request(id, index) {
   return new Promise((resolve, reject) => {
     const options = {
       key: keys[index],
-      q: q,
       maxResults: 10,
       part: 'snippet',
       videoCategoryId: 10,
       chart: 'mostpopular',
       type: 'video',
+      relatedToVideoId: id,
     };
 
     axios
       .get(urls.baseUrl + '/search', {params: options})
       .then(resp => {
-        console.log(resp.status);
-        resolve({data: resp.data, status: resp.status});
+        resolve(resp.data);
       })
       .catch(err => {
-        console.log(err);
-        reject({status: 403, err: err});
+        reject(err);
       });
   });
 }
 
-router.get('/search/:q', (req, res, next) => {
-  console.log('search');
-  let query = req.params.q;
-  let isStatusBad = true;
+router.get('/related/:id', (req, res, next) => {
+  console.log('related', req.params.id);
+  let query = req.params.id;
 
-  let response;
   request(query, 0)
-    .then(resp => {
-      res.send(resp.data);
+    .then(data => {
+      console.log('first request success');
+      res.send(data);
     })
     .catch(firsterr => {
       request(query, 1)
-        .then(resp => {
-          res.send(resp.data);
+        .then(data => {
+          console.log('second request succes');
+          res.send(data);
         })
         .catch(seconderr => {
           console.log(seconderr);
