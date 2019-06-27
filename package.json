@@ -5,17 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anilpdv/musiq.git"
   },
-  "keywords": [
-    "musiq",
-    "songs",
-    "songs-download"
-  ],
+  "keywords": ["musiq", "songs", "songs-download"],
   "author": "anilpdv",
   "license": "ISC",
   "bugs": {
