@@ -12,7 +12,7 @@ function request(q, index) {
     const options = {
       key: keys[index],
       q: q,
-      maxResults: 10,
+      maxResults: 30,
       part: 'snippet',
       videoCategoryId: 10,
       chart: 'mostpopular',
