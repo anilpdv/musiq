@@ -10,6 +10,7 @@ const downloadRoute = require('./routes/download');
 const lyricsRoute = require('./routes/lyrics');
 const listenRoute = require('./routes/listen');
 const relatedRoute = require('./routes/relatedSongs.js');
+const playlistRoute = require('./routes/playlist.js');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/api', downloadRoute);
 app.use('/api', lyricsRoute);
 app.use('/api', listenRoute);
 app.use('/api', relatedRoute);
+app.use('/api', playlistRoute);
 
 // : listening to the port
 const port = process.env.PORT || 4000;
