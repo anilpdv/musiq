@@ -11,7 +11,7 @@ function request(id, index) {
   return new Promise((resolve, reject) => {
     const options = {
       key: keys[index],
-      maxResults: 10,
+      maxResults: 20,
       part: 'snippet',
       videoCategoryId: 10,
       chart: 'mostpopular',
