@@ -3,6 +3,7 @@ const express = require('express');
 const expressOasGenerator = require('express-oas-generator');
 const path = require('path');
 const cors = require('cors');
+const morgan = require('morgan');
 
 // : routes
 const searchRoute = require('./routes/search');
@@ -15,6 +16,7 @@ const playlistRoute = require('./routes/playlist.js');
 const app = express();
 
 // : oas setup
+app.use(morgan('combined'));
 expressOasGenerator.init(app, {});
 app.use(cors());
 
