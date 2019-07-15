@@ -1,8 +1,6 @@
-const express = require('express');
-const axios = require('axios');
 const ytdl = require('youtube-dl');
 const fs = require('fs');
-
+const express = require('express');
 const router = express.Router();
 
 router.get('/listen/:id', (req, res) => {
