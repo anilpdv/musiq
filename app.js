@@ -33,8 +33,3 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log("server is started and listening on the port 3000");
 });
-
-var airbrake = new AirbrakeClient({
-  projectId: 245886,
-  projectKey: "b1729b17ff8bda4c50f40b9b4ec029b6"
-});
