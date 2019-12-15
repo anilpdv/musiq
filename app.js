@@ -1,9 +1,9 @@
 // : loading the modules needed
-const express = require('express');
-const expressOasGenerator = require('express-oas-generator');
-const path = require('path');
-const cors = require('cors');
-const morgan = require('morgan');
+const express = require("express");
+const expressOasGenerator = require("express-oas-generator");
+const path = require("path");
+const cors = require("cors");
+const morgan = require("morgan");
 
 // : routes
 const searchRoute = require('./routes/search');
@@ -17,7 +17,7 @@ const popularRoute = require('./routes/popular.js');
 const app = express();
 
 // : oas setup
-app.use(morgan('combined'));
+app.use(morgan("combined"));
 expressOasGenerator.init(app, {});
 app.use(cors());
 

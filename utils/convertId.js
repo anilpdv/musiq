@@ -1,8 +1,8 @@
 const test = length => {
   let possible;
-  let randomChar = '';
+  let randomChar = "";
 
-  possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
   for (let i = 0; i < length; i++) {
     randomChar =
@@ -14,7 +14,7 @@ const test = length => {
 const convertId = videoId => {
   let charid;
   let length;
-  let generatedValue = '';
+  let generatedValue = "";
 
   for (let i = 0; i < videoId.length; i++) {
     charid = videoId.charCodeAt(i) + 13;
