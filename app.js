@@ -12,6 +12,7 @@ const lyricsRoute = require('./routes/lyrics');
 const listenRoute = require('./routes/listen');
 const relatedRoute = require('./routes/relatedSongs.js');
 const playlistRoute = require('./routes/playlist.js');
+const popularRoute = require('./routes/popular.js');
 
 const app = express();
 
@@ -27,9 +28,10 @@ app.use('/api', lyricsRoute);
 app.use('/api', listenRoute);
 app.use('/api', relatedRoute);
 app.use('/api', playlistRoute);
+app.use('/api', popularRoute);
 
 // : listening to the port
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
-  console.log('server is started and listening on the port 3000');
+  console.log('server is started and listening on the port ' + port);
 });
